@@ -1,0 +1,57 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5dc; /* Fondo beige claro */
+    color: #000;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #8B4513; /* Marrón tierra */
+    margin-bottom: 30px;
+}
+
+.semester {
+    margin-bottom: 30px;
+    background-color: #fffaf0; /* Beige más claro */
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(139, 69, 19, 0.1); /* Sombra marrón suave */
+    border: 1px solid #d2b48c; /* Borde beige medio */
+}
+
+.semester h2 {
+    color: #a0522d; /* Marrón sienna */
+    border-bottom: 2px solid #d2b48c; /* Beige medio */
+    padding-bottom: 5px;
+}
+
+.course {
+    padding: 10px 15px;
+    background-color: #d4e6f1; /* Azul claro suave (para disponibles) */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(139, 69, 19, 0.1);
+    color: #000;
+}
+
+.course.locked {
+    background-color: #e8e8e8; /* Gris muy claro */
+}
+
+.course.completed {
+    background-color: #c8e6c9; /* Verde muy claro */
+}
+
+.course.available {
+    background-color: #d4e6f1; /* Azul claro */
+}
