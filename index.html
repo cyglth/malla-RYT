@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malla Curricular - Ingeniería en Redes y Telecomunicaciones</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>INGENIERÍA EN REDES Y TELECOMUNICACIONES</h1>
+        
+        <div class="semester">
+            <h2>Primer semestre</h2>
+            <div class="courses">
+                <div class="course" data-id="fundamentos-matematicas" onclick="toggleCourse(this)">Fundamentos de Matemáticas</div>
+                <div class="course" data-id="programacion-basica" onclick="toggleCourse(this)">Programación Básica</div>
+                <div class="course" data-id="fisica-i" onclick="toggleCourse(this)">Física I</div>
+                <div class="course" data-id="hardware-software" onclick="toggleCourse(this)">Hardware y Software</div>
+                <div class="course" data-id="ingles-i" onclick="toggleCourse(this)">Inglés I</div>
+                <div class="course" data-id="tecnicas-investigacion" onclick="toggleCourse(this)">Técnicas de Investigación</div>
+            </div>
+        </div>
+        
+        <div class="semester">
+            <h2>Segundo semestre</h2>
+            <div class="courses">
+                <div class="course locked" data-id="calculo-i" data-requires="fundamentos-matematicas" onclick="toggleCourse(this)">Cálculo I</div>
+                <div class="course locked" data-id="programacion-i" data-requires="programacion-basica" onclick="toggleCourse(this)">Programación I</div>
+                <div class="course locked" data-id="fisica-ii" data-requires="fisica-i" onclick="toggleCourse(this)">Física II</div>
+                <div class="course locked" data-id="sistemas-digitales-i" data-requires="hardware-software" onclick="toggleCourse(this)">Sistemas Digitales I</div>
+                <div class="course locked" data-id="ingles-ii" data-requires="ingles-i" onclick="toggleCourse(this)">Inglés II</div>
+                <div class="course locked" data-id="estructuras-discretas" onclick="toggleCourse(this)">Estructuras Discretas</div>
+            </div>
+        </div>
+        
+        <div class="semester">
+            <h2>Tercer semestre</h2>
+            <div class="courses">
+                <div class="course locked" data-id="programacion-ii" data-requires="programacion-i" onclick="toggleCourse(this)">Programación II</div>
+                <div class="course locked" data-id="sistemas-digitales-ii" data-requires="sistemas-digitales-i" onclick="toggleCourse(this)">Sistemas Digitales II</div>
+                <div class="course locked" data-id="sistemas-operativos-i" data-requires="programacion-i,programacion-ii" onclick="toggleCourse(this)">Sistemas Operativos I</div>
+                <div class="course locked" data-id="circuitos-electricos-i" data-requires="fisica-ii" onclick="toggleCourse(this)">Circuitos Eléctricos I</div>
+                <div class="course locked" data-id="redes-i" data-requires="hardware-software" onclick="toggleCourse(this)">Redes I</div>
+            </div>
+        </div>
+        
+        <div class="semester">
+            <h2>Cuarto semestre</h2>
+            <div class="courses">
+                <div class="course locked" data-id="taller-sistemas-operativos-i" data-requires="sistemas-operativos-i" onclick="toggleCourse(this)">Taller de Sistemas Operativos I</div>
+                <div class="course locked" data-id="campos-electromagneticos" data-requires="fisica-ii" onclick="toggleCourse(this)">Campos Electromagnéticos</div>
+                <div class="course locked" data-id="base-de-datos-i" data-requires="programacion-ii" onclick="toggleCourse(this)">Base de Datos I</div>
+                <div class="course locked" data-id="instalacion-certificacion-redes" data-requires="redes-i" onclick="toggleCourse(this)">Instalación y Certificación de Redes</div>
+                <div class="course locked" data-id="algebra-lineal" onclick="toggleCourse(this)">Álgebra Lineal</div>
+                <div class="course locked" data-id="electronica-i" data-requires="circuitos-electricos-i" onclick="toggleCourse(this)">Electrónica I</div>
+            </div>
+        </div>
+        
+        <div class="semester">
+            <h2>Quinto semestre</h2>
+            <div class="courses">
+                <div class="course locked" data-id="sistemas-operativos-ii" data-requires="taller-sistemas-operativos-i" onclick="toggleCourse(this)">Sistemas Operativos II</div>
+                <div class="course locked" data-id="redes-ii" data-requires="instalacion-certificacion-redes" onclick="toggleCourse(this)">Redes II</div>
+                <div class="course locked" data-id="circuitos-electricos-ii" data-requires="circuitos-electricos-i" onclick="toggleCourse(this)">Circuitos Eléctricos II</div>
+                <div class="course locked" data-id="analisis-sistemas-senales" data-requires="campos-electromagneticos" onclick="toggleCourse(this)">Análisis de Sistemas y Señales</div>
+                <div class="course locked" data-id="fundamentos-sistemas-comunicacion" data-requires="analisis-sistemas-senales" onclick="toggleCourse(this)">Fundamentos de Sistemas de Comunicación</div>
+                <div class="course locked" data-id="estadistica-descriptiva" onclick="toggleCourse(this)">Estadística Descriptiva</div>
+            </div>
+        </div>
+        
+        <div class="semester">
+            <h2>Sexto Semestre</h2>
+            <div class="courses">
+                <div class="course locked" data-id="taller-sistemas-operativos-ii" data-requires="sistemas-operativos-ii" onclick="toggleCourse(this)">Taller de Sistemas Operativos II</div>
+                <div class="course locked" data-id="administracion-rb-i" data-requires="base-de-datos-i" onclick="toggleCourse(this)">Administración de RB I</div>
+                <div class="course locked" data-id="redes-iii" data-requires="redes-ii" onclick="toggleCourse(this)">Redes III</div>
+                <div class="course locked" data-id="tecnologias-inalambricas" data-requires="redes-ii" onclick="toggleCourse(this)">Tecnologías Inalámbricas</div>
+                <div class="course locked" data-id="antenas-propagacion" data-requires="fundamentos-sistemas-comunicacion" onclick="toggleCourse(this)">Antenas y Propagación</div>
+                <div class="course locked" data-id="estadistica-inferencial" data-requires="estadistica-descriptiva" onclick="toggleCourse(this)">Estadística inferencial</div>
+            </div>
+        </div>
+        
+        <div class="semester">
+            <h2>Séptimo semestre</h2>
+            <div class="courses">
+                <div class="course locked" data-id="sistemas-comunicaciones-opticas" onclick="toggleCourse(this)">Sistemas de Comunicaciones Ópticas</div>
+                <div class="course locked" data-id="telefonia-digital-i" onclick="toggleCourse(this)">Telefonía Digital I</div>
+                <div class="course locked" data-id="redes-iv" data-requires="redes-iii" onclick="toggleCourse(this)">Redes IV</div>
+                <div class="course locked" data-id="seguridad-redes" data-requires="redes-iii" onclick="toggleCourse(this)">Seguridad en Redes</div>
+                <div class="course locked" data-id="radiocomunicaciones-i" onclick="toggleCourse(this)">Radiocomunicaciones I</div>
+                <div class="course locked" data-id="seguridad-informatica-i" onclick="toggleCourse(this)">Seguridad Informática I</div>
+                <div class="course locked" data-id="electiva-1" onclick="toggleCourse(this)">Electiva 1</div>
+            </div>
+        </div>
+        
+        <div class="semester">
+            <h2>Octavo semestre</h2>
+            <div class="courses">
+                <div class="course locked" data-id="redes-inalambricas-moviles" data-requires="redes-iii,tecnologias-inalambricas" onclick="toggleCourse(this)">Redes Inalámbricas y Móviles</div>
+                <div class="course locked" data-id="radiocomunicaciones-ii" data-requires="radiocomunicaciones-i" onclick="toggleCourse(this)">Radiocomunicaciones II</div>
+                <div class="course locked" data-id="emprendedurismo" onclick="toggleCourse(this)">Emprendedurismo</div>
+                <div class="course locked" data-id="electiva-2" onclick="toggleCourse(this)">Electiva 2</div>
+                <div class="course locked" data-id="electiva-3" onclick="toggleCourse(this)">Electiva 3</div>
+            </div>
+        </div>
+        
+        <div class="semester">
+            <h2>Noveno semestre</h2>
+            <div class="courses">
+                <div class="course locked" data-id="electiva-4" onclick="toggleCourse(this)">Electiva 4</div>
+                <div class="course locked" data-id="electiva-5" onclick="toggleCourse(this)">Electiva 5</div>
+                <div class="course locked" data-id="modalidades-grado" data-requires="redes-ii,base-de-datos-i,estadistica-descriptiva" onclick="toggleCourse(this)">Modalidades de grado y prácticas profesionales</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
